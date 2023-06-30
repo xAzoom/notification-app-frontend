@@ -1,0 +1,10 @@
+services:
+  node:
+    build:
+      context: .
+      target: notification_app_frontend
+    ports:
+      - 9550:5173
+    volumes:
+        - .:/app:rw
+        - /app/node_modules
